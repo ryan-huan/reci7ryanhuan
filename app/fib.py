@@ -5,7 +5,7 @@ The zeroth number in the fibonacci sequence is 0. The first number is 1
 Negative numbers should return None
 """
 def fibonacci(position):
-  if(position < 0 or not(isnumeric(position))):
+  if(position < 0 or not(isinstance(position, int))):
     return None 
     raise ValueError("Invalid input")
     
