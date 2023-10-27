@@ -3,9 +3,11 @@ on: push
 
 jobs:
   format: 
-    - name: Run black formatter
-      uses: rickstaa/action-black@v1.3.1
-            
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Run black formatter
+        uses: rickstaa/action-black@v1.3.1            
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 10
